@@ -37,11 +37,13 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mt-8 flex items-center justify-center gap-3"
           >
-            <a href="#" className="inline-flex items-center justify-center rounded-2xl bg-emerald-500 text-black font-semibold px-5 py-3 hover:bg-emerald-400 transition-colors border border-emerald-300/30">
-              Get Started Free
+            <a href="#" className="group inline-flex items-center justify-center rounded-2xl bg-emerald-500 text-black font-semibold px-5 py-3 border border-emerald-300/30 transition-all duration-300 hover:bg-emerald-400 hover:shadow-[0_10px_40px_rgba(34,197,94,0.35)] hover:-translate-y-0.5">
+              <span>Get Started Free</span>
+              <span aria-hidden className="ml-2 transition-transform group-hover:translate-x-0.5">→</span>
             </a>
-            <a href="#" className="inline-flex items-center justify-center rounded-2xl bg-transparent text-white font-medium px-5 py-3 border border-white/10 hover:border-white/25">
-              View Docs
+            <a href="#" className="group inline-flex items-center justify-center rounded-2xl bg-transparent text-white font-medium px-5 py-3 border border-white/10 hover:border-white/25 transition-all duration-300 hover:-translate-y-0.5">
+              <span>View Docs</span>
+              <span aria-hidden className="ml-2 opacity-70 transition-transform group-hover:translate-x-0.5">↗</span>
             </a>
           </motion.div>
         </div>
@@ -50,10 +52,13 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="relative mt-14 rounded-2xl border border-white/10 bg-[#0f0f0f] overflow-hidden"
+          className="relative mt-14 rounded-2xl border border-white/10 bg-[#0f0f0f] overflow-hidden group"
         >
           <div className="absolute inset-0" style={{
             background: 'radial-gradient(60% 60% at 50% 0%, rgba(34,197,94,0.12) 0%, transparent 60%)'
+          }} />
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{
+            background: 'radial-gradient(40% 40% at 50% 50%, rgba(34,197,94,0.12), transparent 60%)'
           }} />
           <div className="aspect-[16/9]">
             <Spline scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode" style={{ width: '100%', height: '100%' }} />

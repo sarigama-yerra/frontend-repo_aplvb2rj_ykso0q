@@ -1,9 +1,9 @@
 import React from 'react'
 
 const TestCard = ({ name, role, text }) => (
-  <div className="rounded-2xl border border-white/10 bg-[#171717] p-6 flex flex-col gap-3">
+  <div className="group rounded-2xl border border-white/10 bg-[#171717] p-6 flex flex-col gap-3 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(34,197,94,0.18)]">
     <div className="flex items-center gap-3">
-      <img src={`https://api.dicebear.com/7.x/thumbs/svg?seed=${encodeURIComponent(name)}`} alt={name} className="h-10 w-10 rounded-full" />
+      <img src={`https://api.dicebear.com/7.x/thumbs/svg?seed=${encodeURIComponent(name)}`} alt={name} className="h-10 w-10 rounded-full transition-transform duration-500 group-hover:scale-105" />
       <div>
         <div className="text-white text-sm font-medium">{name}</div>
         <div className="text-zinc-400 text-xs">{role}</div>

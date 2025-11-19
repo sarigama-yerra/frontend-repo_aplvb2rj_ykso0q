@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Step = ({ index, title, desc }) => (
-  <div className="rounded-2xl border border-white/10 bg-[#171717] p-6">
+  <div className="group rounded-2xl border border-white/10 bg-[#171717] p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(34,197,94,0.18)]">
     <div className="text-sm text-zinc-400">{String(index).padStart(2, '0')}</div>
     <div className="mt-2 text-white font-semibold">{title}</div>
     <div className="mt-1 text-zinc-300 text-sm">{desc}</div>

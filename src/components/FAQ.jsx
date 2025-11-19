@@ -4,9 +4,12 @@ const Item = ({ q, a, i, open, setOpen }) => {
   const isOpen = open === i
   return (
     <div className="border-b border-white/10">
-      <button onClick={() => setOpen(isOpen ? null : i)} className="w-full text-left py-4 flex items-center justify-between">
-        <span className="text-white font-medium">{q}</span>
-        <span className="text-zinc-400">{isOpen ? '-' : '+'}</span>
+      <button
+        onClick={() => setOpen(isOpen ? null : i)}
+        className="group w-full text-left py-4 flex items-center justify-between"
+      >
+        <span className="text-white font-medium transition-colors group-hover:text-emerald-300">{q}</span>
+        <span className="text-zinc-400 transition-transform duration-300 group-hover:rotate-90">{isOpen ? '-' : '+'}</span>
       </button>
       {isOpen && <p className="pb-4 text-zinc-300 text-sm">{a}</p>}
     </div>
