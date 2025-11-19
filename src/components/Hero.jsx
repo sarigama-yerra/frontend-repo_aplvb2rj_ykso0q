@@ -1,0 +1,65 @@
+import React from 'react'
+import Spline from '@splinetool/react-spline'
+import { motion } from 'framer-motion'
+
+export default function Hero() {
+  return (
+    <section className="relative overflow-hidden bg-[#0a0a0a]">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden>
+        <div className="absolute -inset-[40%] rounded-full opacity-40" style={{
+          background: 'radial-gradient(closest-side, rgba(34,197,94,0.18), transparent 70%)'
+        }} />
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+        <div className="text-center max-w-3xl mx-auto">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white"
+          >
+            Agentic Coding Platform for Real Software
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="mt-5 text-lg text-zinc-300"
+          >
+            Build production-grade apps by talking to your AI engineering team.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-8 flex items-center justify-center gap-3"
+          >
+            <a href="#" className="inline-flex items-center justify-center rounded-2xl bg-emerald-500 text-black font-semibold px-5 py-3 hover:bg-emerald-400 transition-colors border border-emerald-300/30">
+              Get Started Free
+            </a>
+            <a href="#" className="inline-flex items-center justify-center rounded-2xl bg-transparent text-white font-medium px-5 py-3 border border-white/10 hover:border-white/25">
+              View Docs
+            </a>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.25 }}
+          className="relative mt-14 rounded-2xl border border-white/10 bg-[#0f0f0f] overflow-hidden"
+        >
+          <div className="absolute inset-0" style={{
+            background: 'radial-gradient(60% 60% at 50% 0%, rgba(34,197,94,0.12) 0%, transparent 60%)'
+          }} />
+          <div className="aspect-[16/9]">
+            <Spline scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
